@@ -254,5 +254,20 @@ function send() {
   input.value = "";
 }
 </script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDznyCmJFb7bsQpwuTxxJvvAsb3C-_c2Gc",
+    authDomain: "harmonia--darkeana.firebaseapp.com",
+    projectId: "harmonia--darkeana"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+</script>
 </body>
 </html>
